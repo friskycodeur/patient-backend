@@ -1,0 +1,19 @@
+{% extends "__base.html" %}
+{% block container %}
+<div class="jumbotron m-3" style="max-width:70%;background-color:bisque;">
+<h1 class="text-center mb-0">
+    <strong> {{patient.first_name}} {{patient.last_name}}  </strong>
+</h1>
+    <p class="card-text mb-3 mt-0 text-center text-capitalize">
+        
+    </p>
+<p class="card-text m-3 text-center font-weight-bolder">
+    <div class="">Age : {{patient.age}}</div> 
+    <div class="">Gender : {{patient.gender}} </div> 
+    <div class="">Assigned Doctor : {{patient.doctor_name}}</div> 
+    <div class="">Fees : {{patient.doctor_fees}}</div> 
+    <div class="">Meds started on: {{patient.meds_start_date}}</div> 
+    <div class="">Problem/Disease : {{patient.problem}}</div> 
+</p>
+</div>
+{% endblock %}

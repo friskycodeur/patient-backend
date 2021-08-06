@@ -1,0 +1,12 @@
+{% extends "__base.html"%}
+{% block container %}
+    <div class="container p-3 mx-auto d-block post-form w-75">
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {% include 'utils/_forms.html' with form=form %}
+            <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </div>
+        </form>
+    </div>
+{% endblock %}

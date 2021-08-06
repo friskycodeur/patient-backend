@@ -43,9 +43,9 @@ CORE_APPS = (
     "django.contrib.staticfiles",
 )
 
-THIRD_PARTY_APPS = ()
+THIRD_PARTY_APPS = ("widget_tweaks",)
 
-OUR_APPS = ()
+OUR_APPS = ("patient",)
 
 INSTALLED_APPS = CORE_APPS + OUR_APPS + THIRD_PARTY_APPS
 
