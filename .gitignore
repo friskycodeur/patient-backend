@@ -21,7 +21,7 @@ src/*/static/admin
 .DS_Store
 
 # Environment
-local.env
+*local.env
 
 # local files, for debugging/todos/ideas
 .ideas.md
