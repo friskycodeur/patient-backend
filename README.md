@@ -2,7 +2,7 @@
 
 ## Objective -
 
-Create a Django app that have, Create, Update, Delete and List operations for patient.
+A Django app that have, Create, Update, Delete and List operations for patient.
 
 ## Application overview -
 
@@ -24,7 +24,7 @@ Create a Django app that have, Create, Update, Delete and List operations for pa
 
 ## Demo Credentials -
 
-**Username:** admin
+**Username:** admin <br>
 **Password:** pass
 
 ## Setup Instructions
