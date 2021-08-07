@@ -1,19 +1,26 @@
 {% extends "__base.html" %}
 {% block container %}
-<div class="jumbotron m-3" style="max-width:70%;background-color:bisque;">
+<div class="d-flex justify-content-center">
+<div class="jumbotron m-3">
 <h1 class="text-center mb-0">
     <strong> {{patient.first_name}} {{patient.last_name}}  </strong>
 </h1>
     <p class="card-text mb-3 mt-0 text-center text-capitalize">
         
     </p>
-<p class="card-text m-3 text-center font-weight-bolder">
-    <div class="">Age : {{patient.age}}</div> 
-    <div class="">Gender : {{patient.gender}} </div> 
-    <div class="">Assigned Doctor : {{patient.doctor_name}}</div> 
-    <div class="">Fees : {{patient.doctor_fees}}</div> 
-    <div class="">Meds started on: {{patient.meds_start_date}}</div> 
-    <div class="">Problem/Disease : {{patient.problem}}</div> 
+<p class="card-text m-3 text-center font-weight-bolder p-2">
+    <div class="py-1"><span class="font-weight-bold"> Age :</span> {{patient.age}}</div> 
+    <div class="py-1"><span class="font-weight-bold">Gender : </span>{{patient.gender}} </div> 
+    <div class="py-1"><span class="font-weight-bold">Assigned Doctor :</span> {{patient.doctor_name}}</div> 
+    <div class="py-1"><span class="font-weight-bold">Fees :</span> {{patient.doctor_fees}}</div> 
+    <div class="py-1"><span class="font-weight-bold">Meds started on:</span> {{patient.meds_start_date}}</div> 
+    <div class="py-1"><span class="font-weight-bold">Problem/Disease :</span> {{patient.problem}}</div> 
 </p>
+
+<div class="text-center">
+<a href="{% url 'patient-update' patient.id %}" class="btn btn-success mx-2">Update</a>
+<a href="{% url 'patient-delete' patient.id %}" class="btn btn-danger mx-2">Remove</a>
+</div>
+</div>
 </div>
 {% endblock %}

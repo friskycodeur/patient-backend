@@ -1,4 +1,9 @@
-from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
+from django.shortcuts import (
+    render,
+    get_object_or_404,
+    HttpResponseRedirect,
+    redirect,
+)
 
 # Create your views here.
 from .models import Patient
@@ -12,6 +17,7 @@ def patient_create_view(request):
 
     if form.is_valid():
         form.save()
+        return redirect("home")
 
     context["form"] = form
     return render(request, template_name, context)
@@ -49,11 +55,12 @@ def patient_update_view(request, id):
 
 
 def patient_delete_view(request, id):
+    context = {}
     template_name = "patient_delete.html"
     obj = get_object_or_404(Patient, id=id)
-
+    context["patient"] = obj
     if request.method == "POST":
         obj.delete()
         return HttpResponseRedirect("/")
 
-    return render(request, template_name)
+    return render(request, template_name, context)

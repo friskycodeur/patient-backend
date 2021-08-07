@@ -1,0 +1,24 @@
+{% extends "__base.html"%}
+{% block container %}
+<!-- <div class="d-flex justify-content-center border-danger">
+    <div class="m-3 bg-light p-3 rounded-0 border-danger">
+        <form method="POST">
+            {% csrf_token %}
+            Are you want to delete this item ? <br>   
+            <input type="submit" value="Yes" />
+            <a href="/">Cancel </a>
+        </form>
+    </div>
+</div> -->
+<div class="content-section jumbotron m-3">
+    <form method="POST">
+    {% csrf_token %}
+    <legend class='border-bottom mb-4 text-center'>Are you sure you want to delete {{patient.first_name}} {{patient.last_name}}'s data?</legend>
+    <div class="text-center">
+        <button class='btn btn-outline-danger' type='submit'>Delete</button>
+        <a href="{% url 'home' %}" class='btn btn-outline-primary'>Cancel</a>
+    </div>
+    
+    </form>
+</div>
+{% endblock %}
