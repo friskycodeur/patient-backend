@@ -30,7 +30,9 @@ SECRET_KEY = env("SECRET_KEY", default="new-secret-key-here")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "patient-backend-django.herokuapp.com",
+]
 
 # Application definition
 
